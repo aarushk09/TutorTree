@@ -279,6 +279,21 @@ export function App() {
   }, [currentIndex, stage]);
 
   useEffect(() => {
+    const shouldWarnBeforeLeaving =
+      stage === "tour" || stage === "evaluation" || stage === "feedback";
+    if (!shouldWarnBeforeLeaving) return;
+
+    const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+      event.preventDefault();
+      event.returnValue =
+        "Your in-progress study responses may not be saved if you leave or refresh this page.";
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => window.removeEventListener("beforeunload", handleBeforeUnload);
+  }, [stage]);
+
+  useEffect(() => {
     if (!showQualityReminder || reminderCountdown <= 0) return;
     const timer = window.setTimeout(() => {
       setReminderCountdown((seconds) => seconds - 1);
