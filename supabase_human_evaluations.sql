@@ -5,9 +5,36 @@ create table if not exists public.human_evaluations (
     session_id uuid not null,
     scenario_id text not null,
     selected_intervention text not null check (selected_intervention in ('A', 'B', 'Tie')),
+    evaluator_role text,
     reasoning text,
     created_at timestamptz not null default now()
 );
+
+alter table public.human_evaluations
+add column if not exists evaluator_role text;
+
+do $$
+begin
+    if not exists (
+        select 1
+        from pg_constraint
+        where conname = 'human_evaluations_evaluator_role_check'
+          and conrelid = 'public.human_evaluations'::regclass
+    ) then
+        alter table public.human_evaluations
+        add constraint human_evaluations_evaluator_role_check
+        check (
+            evaluator_role is null
+            or evaluator_role in (
+                'University Faculty',
+                'K-12 Teacher',
+                'Student',
+                'EdTech Researcher',
+                'Other'
+            )
+        );
+    end if;
+end $$;
 
 alter table public.human_evaluations enable row level security;
 
@@ -27,6 +54,13 @@ with check (
     and scenario_id is not null
     and length(btrim(scenario_id)) > 0
     and selected_intervention in ('A', 'B', 'Tie')
+    and evaluator_role in (
+        'University Faculty',
+        'K-12 Teacher',
+        'Student',
+        'EdTech Researcher',
+        'Other'
+    )
     and coalesce(length(reasoning), 0) <= 4000
 );
 

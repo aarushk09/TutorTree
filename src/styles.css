@@ -112,6 +112,50 @@ h1 {
   border-bottom: 0;
 }
 
+.role-selector {
+  margin: 0 0 32px;
+  padding: 0;
+  border: 3px solid #000;
+}
+
+.role-selector legend {
+  margin-left: 14px;
+  padding: 0 8px;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.role-options {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.role-option {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  min-height: 78px;
+  padding: 14px;
+  border-right: 3px solid #000;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.role-option:last-child {
+  border-right: 0;
+}
+
+.role-option input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: #000;
+}
+
 .primary-action,
 .submit-button,
 .choice-button {
@@ -487,8 +531,18 @@ textarea {
   .workspace,
   .comparison,
   .drawer-grid,
-  .tour-footer {
+  .tour-footer,
+  .role-options {
     grid-template-columns: 1fr;
+  }
+
+  .role-option {
+    border-right: 0;
+    border-bottom: 3px solid #000;
+  }
+
+  .role-option:last-child {
+    border-bottom: 0;
   }
 
   .drawer-grid label,

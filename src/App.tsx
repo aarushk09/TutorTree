@@ -5,8 +5,22 @@ import { isSupabaseConfigured, supabase } from "./supabaseClient";
 
 type Selection = "A" | "B" | "Tie";
 type Stage = "landing" | "tour" | "evaluation" | "feedback" | "finished";
+type EvaluatorRole =
+  | "University Faculty"
+  | "K-12 Teacher"
+  | "Student"
+  | "EdTech Researcher"
+  | "Other";
 
 const SESSION_KEY = "neurips-human-eval-session-id";
+const EVALUATOR_ROLE_KEY = "neurips-human-eval-evaluator-role";
+const evaluatorRoles: EvaluatorRole[] = [
+  "University Faculty",
+  "K-12 Teacher",
+  "Student",
+  "EdTech Researcher",
+  "Other",
+];
 
 const mockScenario: Scenario = {
   id: "mock_example",
@@ -36,6 +50,13 @@ function fallbackUuid() {
   return `${hex.slice(0, 4).join("")}-${hex.slice(4, 6).join("")}-${hex
     .slice(6, 8)
     .join("")}-${hex.slice(8, 10).join("")}-${hex.slice(10).join("")}`;
+}
+
+function getStoredEvaluatorRole(): EvaluatorRole | "" {
+  const storedRole = localStorage.getItem(EVALUATOR_ROLE_KEY);
+  return evaluatorRoles.includes(storedRole as EvaluatorRole)
+    ? (storedRole as EvaluatorRole)
+    : "";
 }
 
 function Transcript({ value }: { value: string }) {
@@ -186,6 +207,9 @@ export function App() {
   const [sessionId] = useState(getSessionId);
   const [stage, setStage] = useState<Stage>("landing");
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [evaluatorRole, setEvaluatorRole] = useState<EvaluatorRole | "">(
+    getStoredEvaluatorRole,
+  );
   const [selected, setSelected] = useState<Selection | null>(null);
   const [reasoning, setReasoning] = useState("");
   const [feedbackText, setFeedbackText] = useState("");
@@ -199,6 +223,11 @@ export function App() {
     () => Math.round(((currentIndex + 1) / scenarios.length) * 100),
     [currentIndex],
   );
+
+  const updateEvaluatorRole = (role: EvaluatorRole) => {
+    setEvaluatorRole(role);
+    localStorage.setItem(EVALUATOR_ROLE_KEY, role);
+  };
 
   useEffect(() => {
     if (selected && stage === "evaluation") {
@@ -254,6 +283,7 @@ export function App() {
         session_id: sessionId,
         scenario_id: currentScenario.id,
         selected_intervention: selected,
+        evaluator_role: evaluatorRole,
         reasoning: reasoning.trim() || null,
       });
 
@@ -325,9 +355,28 @@ export function App() {
               responses are hidden and randomized.
             </p>
           </div>
+          <fieldset className="role-selector">
+            <legend>Evaluator Role</legend>
+            <div className="role-options">
+              {evaluatorRoles.map((role) => (
+                <label key={role} className="role-option">
+                  <input
+                    type="radio"
+                    name="evaluator-role"
+                    value={role}
+                    checked={evaluatorRole === role}
+                    onChange={() => updateEvaluatorRole(role)}
+                    required
+                  />
+                  <span>{role}</span>
+                </label>
+              ))}
+            </div>
+          </fieldset>
           <button
             type="button"
             className="primary-action"
+            disabled={!evaluatorRole}
             onClick={() => setStage("tour")}
           >
             Start Tutorial
