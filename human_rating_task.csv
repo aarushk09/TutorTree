@@ -1,0 +1,116 @@
+Scenario_ID,Student_Profile,Chat_Context,Intervention_A,Intervention_B,Expert_Preference,Reasoning
+scenario_062,Standard Beginner,"student: How do I create a variable in Python? I tried just writing myVar = 5.
+teacher: Great start! But can you tell me what a variable actually is?
+student: It's just a name for a number, right?
+teacher: That's part of it, but remember, it's also about storing values. What do you think you need to do to define a variable?
+student: So, do I need to write something before myVar? Like 'define' or something?",socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,hint: Look back at the previous rule and try applying only the next small step.,,
+scenario_204,Frustrated/Overloaded Learner,"student: Why can’t I have two y-values for the same x-value?
+teacher: What do you think a function is?
+student: I thought it was just a rule, but now I'm confused.",direct_answer: The answer is the correct final result. Here is the full step-by-step solution for Understanding the concept of functions and their graphs..,socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,,
+scenario_298,Frustrated/Overloaded Learner,"student: I keep thinking lists can only have numbers. Is that right?
+teacher: Lists can hold different types of data. Can you think of an example of a mixed list?
+student: I don't really know... I thought they were just for numbers.",socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,direct_answer: The answer is the correct final result. Here is the full step-by-step solution for Using lists and their methods.,,
+scenario_303,Deep Misconception,"student: If it sounds convincing, it must be true, right?
+teacher: What about arguments that seem emotional but may not be logical?
+student: But people wouldn’t say them if they weren’t true!",socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,hint: Look back at the previous rule and try applying only the next small step.,,
+scenario_372,Deep Misconception,"student: I wrote a function that adds two numbers, but I can't use the variable 'sum' outside of it.
+teacher: What do you think happened to 'sum' when the function finished running?
+student: Isn't it supposed to be available everywhere in my code?
+teacher: What does it mean to declare a variable inside a function?
+student: I thought it would just be a global variable.
+student: Why can't I use 'sum' outside? That doesn't seem fair.",hint: Look back at the previous rule and try applying only the next small step.,socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,,
+scenario_054,Standard Beginner,"student: I can’t figure out where to plot the points for this equation. I feel lost.
+teacher: Can you tell me what the coordinates represent in a graph?
+student: Isn’t it just the x and y values? I don’t see how that helps me plot them.",socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,hint: Look back at the previous rule and try applying only the next small step.,,
+scenario_125,Advanced Student,"student: I can do simple loops, but nested loops confuse me.
+teacher: What happens when you use a loop inside another loop?
+student: I think it runs the inner loop for each iteration of the outer loop?
+teacher: Can you give an example of where that might happen?
+student: I’m not sure how to visualize that. It feels like too many steps.",socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,hint: Look back at the previous rule and try applying only the next small step.,,
+scenario_348,Deep Misconception,"student: I thought the try block would stop any errors from happening.
+teacher: What do you think happens when an error occurs in the try block?
+student: It just won’t run if there’s an error, right?
+teacher: Actually, it will run, but it will jump to the except block. Can you see how that might be useful?
+student: So it doesn’t stop the error; it just ignores it?",socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,hint: Look back at the previous rule and try applying only the next small step.,,
+scenario_359,Deep Misconception,"student: If it follows a logical structure, it must be a strong argument.
+teacher: That’s an interesting point! How can we check if the conclusion is actually true?
+student: I guess if it sounds right, it is?",socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,hint: Look back at the previous rule and try applying only the next small step.,,
+scenario_325,Deep Misconception,"student: Why can't I use the variable defined in my function outside of it?
+teacher: What do you think happens to a variable when a function finishes running?
+student: I thought variables inside functions are always available to the whole program.",socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,hint: Look back at the previous rule and try applying only the next small step.,,
+scenario_256,Frustrated/Overloaded Learner,"student: I don't understand the difference between inductive and deductive reasoning. They sound the same.
+teacher: It's understandable to mix them up! Let's clarify each one. What do you think deductive reasoning is?
+student: I think it's just about making a point that feels right, like when someone is passionate.
+teacher: That's a common misconception. Deductive reasoning is based on logic and facts. Can you think of an example?
+student: So, if it's not just about feelings, then I don't really know any examples.",direct_answer: The answer is the correct final result. Here is the full step-by-step solution for Understanding deductive and inductive reasoning.,socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,,
+scenario_461,Passive Learner,"student: I don't get how to solve this quadratic equation. Can I just add something to both sides?
+teacher: What do you think happens when you add or subtract from both sides of an equation?
+student: I think it just makes it easier to see the answer.
+teacher: What if the equation has multiple terms? How does that affect what you do?
+student: I guess I’m not sure how to deal with those. Shouldn’t I just focus on getting the number by itself?",socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,hint: Look back at the previous rule and try applying only the next small step.,,
+scenario_334,Deep Misconception,"student: Isn't it okay for a function to give different results for the same number? Like f(2) could be 3 or 5.
+teacher: Functions are defined to give one output for each input. What do you think would happen if they didn't?
+student: But I feel like in real life, things can change!",direct_answer: The answer is the correct final result. Here is the full step-by-step solution for Understanding the concept of functions.,socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,,
+scenario_321,Deep Misconception,"student: I can't figure out how to solve this quadratic equation. Can I just use the slope formula?
+teacher: Let's take a step back. What do you remember about the quadratic formula?
+student: I think it’s something like y = mx + b, right?",socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,direct_answer: The answer is the correct final result. Here is the full step-by-step solution for Solving quadratic equations using the quadratic formula.,,
+scenario_422,Passive Learner,"student: I don't get why we need to write functions. Can't we just write everything in one block?
+teacher: What do you think would happen if you had to repeat the same code multiple times?
+student: It would be annoying, I guess.
+teacher: And how might using a function change that situation?
+student: It would make it easier? But I still don’t see the point.",socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,hint: Look back at the previous rule and try applying only the next small step.,,
+scenario_455,Passive Learner,"student: I don’t get why I need functions. Can’t I just write everything in one big block of code?
+teacher: What might be the benefits of breaking your code into smaller pieces using functions?
+student: It seems like it could make it easier, but I still don’t see why it’s necessary.",socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,hint: Look back at the previous rule and try applying only the next small step.,,
+scenario_450,Passive Learner,"student: I don’t see how ratios work outside of cooking. Can you explain?
+teacher: What do you think a ratio represents?
+student: It’s just a way to compare things, like ingredients.
+teacher: Can you think of other situations where comparison might be important?
+student: Not really. I just thought it’s only for recipes.",hint: Look back at the previous rule and try applying only the next small step.,socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,,
+scenario_292,Frustrated/Overloaded Learner,"student: I keep trying to understand loops, but they just confuse me.
+teacher: What part of loops do you find confusing? Is it the syntax or the concept?
+student: I think loops just repeat one thing. Why would I need them for anything else?",socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,direct_answer: The answer is the correct final result. Here is the full step-by-step solution for Understanding loops in Python.,,
+scenario_435,Passive Learner,"student: I wrote a while loop to count numbers, but it doesn’t work if the condition is false from the start.
+teacher: What do you think happens with the loop if the condition isn’t met?
+student: I thought it would still run once, like a function.",hint: Look back at the previous rule and try applying only the next small step.,socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,,
+scenario_453,Passive Learner,"student: When my friend said that all cats hate dogs, I just accepted it. Isn't that true?
+teacher: What could you ask to find out if that statement really holds true for all cats?
+student: Maybe I could ask if every cat really acts that way, but I think it's just a fact.",socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,hint: Look back at the previous rule and try applying only the next small step.,,
+scenario_341,Deep Misconception,"student: I don't think I can use the quadratic formula here because I can factor it easily.
+teacher: Remember, the quadratic formula can be applied to any quadratic equation, even those that can be factored. Can you show me the equation you're trying to solve?
+student: It's x^2 - 5x + 6 = 0. I can just factor it as (x-2)(x-3) right?
+teacher: That's correct, but can you explain why we could also use the quadratic formula?
+student: I guess I don’t need the formula since I can factor it.",socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,hint: Look back at the previous rule and try applying only the next small step.,,
+scenario_266,Frustrated/Overloaded Learner,"student: Why do I need to back up every argument with proof? Sometimes it feels unnecessary.
+teacher: Not every argument needs physical evidence, but underlying assumptions are crucial. Let’s analyze this together.
+student: So, assumptions are kind of like evidence? I'm confused!",socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,direct_answer: The answer is the correct final result. Here is the full step-by-step solution for Evaluating arguments.,,
+scenario_134,Advanced Student,"student: I solved this system of equations, but it seems like there’s no solution. How can that happen?
+teacher: What do you notice about the lines represented by these equations?
+student: They look parallel. But I thought every system should have a solution?
+teacher: What does it mean if two lines are parallel in terms of their intersection?
+student: I guess they don't meet. So does that mean the system is inconsistent?",socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,hint: Look back at the previous rule and try applying only the next small step.,,
+scenario_002,Standard Beginner,"student: I'm trying to use a loop to print numbers from 1 to 5, but it doesn't seem to work.
+teacher: Let's check your loop syntax. Can you show me how you wrote it?
+student: I wrote 'for i in 1 to 5: print(i)'.
+teacher: Almost there! How do you properly define the range in Python?
+student: I'm not sure. Do I need to add something to fix it?",hint: Look back at the previous rule and try applying only the next small step.,socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,,
+scenario_355,Deep Misconception,"student: I wrote a for loop, but it only prints once. Is that normal?
+teacher: Let’s check how you set up your loop. What do you expect it to do?
+student: I thought it would just run one time and stop.",socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,direct_answer: The answer is the correct final result. Here is the full step-by-step solution for Using loops effectively.,,
+scenario_042,Standard Beginner,"student: I wrote a loop to count from 1 to 5, but I want to print 'Hello!' each time. How do I do that?
+teacher: Great start! Can you show me the loop you wrote?
+student: Sure, it's like 'for i in range(1, 6):' but I don't know how to add the print.
+teacher: You're on the right track! Where do you think you should place the print statement?
+student: I think inside the loop? But I don't understand why it needs to be there.",socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,hint: Look back at the previous rule and try applying only the next small step.,,
+scenario_058,Standard Beginner,"student: I wrote an if-statement, but it doesn’t seem to do anything.
+teacher: What condition did you set? Can you share what follows the if?
+student: I just set it to a number, like if x = 10. Isn’t that enough?",hint: Look back at the previous rule and try applying only the next small step.,socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,,
+scenario_180,Advanced Student,"student: I can solve a^2 + b^2 = c^2 easily, but I can't figure out how to use it in a word problem.
+teacher: What steps do you think you should take to break down a word problem involving the theorem? What key pieces of information do you need to identify?
+student: I know I need the lengths of the sides, but translating words into numbers is where I get stuck.",socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,hint: Look back at the previous rule and try applying only the next small step.,,
+scenario_483,Passive Learner,"student: I can't figure out this logic problem. If one statement is wrong, doesn't that mean the whole thing is wrong?
+teacher: How do you think the truth of a logical statement is determined?
+student: I don't know, I just thought that if one part is wrong then it can't be true.",socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,hint: Look back at the previous rule and try applying only the next small step.,,
+scenario_052,Standard Beginner,"student: I want to write a function to calculate factorial, but I just can't figure out how to do it.
+teacher: What do you think a factorial actually means? Can you describe it?
+student: I think it’s just multiplying the number by itself a bunch of times, right?",socratic_prompt: That is a great question. What do you think the first step should be based on our previous rule?,hint: Look back at the previous rule and try applying only the next small step.,,

@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pmcts"
+version = "0.1.0"
+description = "Pedagogical Monte Carlo Tree Search for inference-time teaching strategy optimization."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.7,<3",
+    "openai>=1.0,<2",
+    "matplotlib>=3.8,<4",
+    "pandas>=2.0,<3",
+    "seaborn>=0.13,<1",
+    "litellm>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0,<9",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+markers = [
+    "live: tests that make live LLM API calls",
+]

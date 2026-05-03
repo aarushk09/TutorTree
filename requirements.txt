@@ -1,0 +1,7 @@
+pydantic>=2.7,<3
+pytest>=8.0,<9
+openai>=1.0,<2
+matplotlib>=3.8,<4
+pandas>=2.0,<3
+seaborn>=0.13,<1
+litellm>=1.0

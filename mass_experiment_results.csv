@@ -1,0 +1,501 @@
+scenario_id,domain,runner_type,selected_action,student_state,pedagogical_reward,total_tokens_used
+scenario_001,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1226
+scenario_001,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1235
+scenario_001,High School Math,pmcts_full,socratic_prompt,Constructive,0.0,3612
+scenario_001,High School Math,ablation_no_reward,hint,Constructive,0.023645,2240
+scenario_001,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1197
+scenario_002,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1085
+scenario_002,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1099
+scenario_002,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3212
+scenario_002,Python Programming,ablation_no_reward,direct_answer,Passive,0.720001,2041
+scenario_002,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1061
+scenario_003,Logical Reasoning,baseline_greedy,direct_answer,Passive,-1.0,1089
+scenario_003,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1103
+scenario_003,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3229
+scenario_003,Logical Reasoning,ablation_no_reward,hint,Constructive,0.566747,2049
+scenario_003,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,1064
+scenario_004,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1142
+scenario_004,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1157
+scenario_004,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3375
+scenario_004,High School Math,ablation_no_reward,hint,Constructive,0.536231,2124
+scenario_004,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1119
+scenario_005,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1116
+scenario_005,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1115
+scenario_005,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3318
+scenario_005,Python Programming,ablation_no_reward,direct_answer,Passive,0.502052,2082
+scenario_005,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1089
+scenario_006,Logical Reasoning,baseline_greedy,direct_answer,Passive,-1.0,1111
+scenario_006,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1112
+scenario_006,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,0.0,3319
+scenario_006,Logical Reasoning,ablation_no_reward,hint,Constructive,0.633523,2076
+scenario_006,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,1087
+scenario_007,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1117
+scenario_007,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1119
+scenario_007,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3332
+scenario_007,High School Math,ablation_no_reward,socratic_prompt,Constructive,0.629525,2091
+scenario_007,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1093
+scenario_008,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1076
+scenario_008,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1083
+scenario_008,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3204
+scenario_008,Python Programming,ablation_no_reward,direct_answer,Passive,0.358778,2041
+scenario_008,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1059
+scenario_009,Logical Reasoning,baseline_greedy,direct_answer,Passive,-1.0,1077
+scenario_009,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1111
+scenario_009,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3245
+scenario_009,Logical Reasoning,ablation_no_reward,direct_answer,Constructive,0.959825,2040
+scenario_009,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,1059
+scenario_010,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1107
+scenario_010,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1115
+scenario_010,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3292
+scenario_010,High School Math,ablation_no_reward,direct_answer,Passive,0.999312,2077
+scenario_010,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1083
+scenario_011,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1075
+scenario_011,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1078
+scenario_011,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3201
+scenario_011,High School Math,ablation_no_reward,socratic_prompt,Constructive,0.114901,2024
+scenario_011,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1050
+scenario_012,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1064
+scenario_012,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1096
+scenario_012,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3165
+scenario_012,Python Programming,ablation_no_reward,socratic_prompt,Constructive,0.75295,2017
+scenario_012,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1045
+scenario_013,Logical Reasoning,baseline_greedy,direct_answer,Constructive,0.0,1090
+scenario_013,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1054
+scenario_013,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3169
+scenario_013,Logical Reasoning,ablation_no_reward,hint,Constructive,0.421725,2002
+scenario_013,Logical Reasoning,ablation_shallow,direct_answer,Constructive,0.0,1066
+scenario_014,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1113
+scenario_014,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,0.0,1138
+scenario_014,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3285
+scenario_014,High School Math,ablation_no_reward,socratic_prompt,Constructive,-0.155565,2085
+scenario_014,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1091
+scenario_015,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1059
+scenario_015,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1068
+scenario_015,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3136
+scenario_015,Python Programming,ablation_no_reward,direct_answer,Passive,0.171436,2007
+scenario_015,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1034
+scenario_016,Logical Reasoning,baseline_greedy,direct_answer,Passive,-1.0,1073
+scenario_016,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1080
+scenario_016,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3207
+scenario_016,Logical Reasoning,ablation_no_reward,socratic_prompt,Constructive,0.500294,2025
+scenario_016,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,1050
+scenario_017,High School Math,baseline_greedy,direct_answer,Constructive,-0.5,1100
+scenario_017,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1097
+scenario_017,High School Math,pmcts_full,hint,Constructive,1.0,3240
+scenario_017,High School Math,ablation_no_reward,socratic_prompt,Constructive,0.833509,2059
+scenario_017,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1072
+scenario_018,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1081
+scenario_018,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1090
+scenario_018,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3212
+scenario_018,Python Programming,ablation_no_reward,socratic_prompt,Constructive,0.852466,2042
+scenario_018,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1058
+scenario_019,Logical Reasoning,baseline_greedy,direct_answer,Constructive,0.0,1090
+scenario_019,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1070
+scenario_019,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3189
+scenario_019,Logical Reasoning,ablation_no_reward,direct_answer,Constructive,0.035974,2022
+scenario_019,Logical Reasoning,ablation_shallow,direct_answer,Constructive,0.0,1067
+scenario_020,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1091
+scenario_020,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1090
+scenario_020,High School Math,pmcts_full,hint,Constructive,1.0,3234
+scenario_020,High School Math,ablation_no_reward,hint,Constructive,0.409325,2047
+scenario_020,High School Math,ablation_shallow,direct_answer,Constructive,-0.5,1073
+scenario_021,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1176
+scenario_021,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1195
+scenario_021,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3485
+scenario_021,High School Math,ablation_no_reward,direct_answer,Passive,0.773649,2175
+scenario_021,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1151
+scenario_022,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1160
+scenario_022,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1169
+scenario_022,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3433
+scenario_022,Python Programming,ablation_no_reward,socratic_prompt,Constructive,-0.035774,2159
+scenario_022,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1137
+scenario_023,Logical Reasoning,baseline_greedy,direct_answer,Constructive,-1.0,1141
+scenario_023,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1150
+scenario_023,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3366
+scenario_023,Logical Reasoning,ablation_no_reward,direct_answer,Constructive,0.771842,2123
+scenario_023,Logical Reasoning,ablation_shallow,direct_answer,Constructive,-0.5,1133
+scenario_024,High School Math,baseline_greedy,direct_answer,Constructive,-1.0,1159
+scenario_024,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,0.0,1149
+scenario_024,High School Math,pmcts_full,direct_answer,Constructive,0.0,3457
+scenario_024,High School Math,ablation_no_reward,hint,Constructive,0.974451,2145
+scenario_024,High School Math,ablation_shallow,direct_answer,Constructive,-0.5,1138
+scenario_025,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1113
+scenario_025,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1117
+scenario_025,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3307
+scenario_025,Python Programming,ablation_no_reward,hint,Constructive,0.339508,2102
+scenario_025,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1094
+scenario_026,Logical Reasoning,baseline_greedy,direct_answer,Passive,-1.0,1158
+scenario_026,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1151
+scenario_026,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3410
+scenario_026,Logical Reasoning,ablation_no_reward,socratic_prompt,Constructive,0.599604,2153
+scenario_026,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,1136
+scenario_027,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1098
+scenario_027,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1103
+scenario_027,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3284
+scenario_027,High School Math,ablation_no_reward,socratic_prompt,Constructive,0.7689,2065
+scenario_027,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1075
+scenario_028,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1143
+scenario_028,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1173
+scenario_028,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3409
+scenario_028,Python Programming,ablation_no_reward,direct_answer,Passive,-0.411252,2131
+scenario_028,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1115
+scenario_029,Logical Reasoning,baseline_greedy,direct_answer,Constructive,-0.5,1139
+scenario_029,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1120
+scenario_029,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3323
+scenario_029,Logical Reasoning,ablation_no_reward,direct_answer,Constructive,0.311285,2097
+scenario_029,Logical Reasoning,ablation_shallow,direct_answer,Constructive,-1.0,1108
+scenario_030,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1141
+scenario_030,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1165
+scenario_030,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3382
+scenario_030,High School Math,ablation_no_reward,hint,Constructive,0.843019,2139
+scenario_030,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1117
+scenario_031,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1145
+scenario_031,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1157
+scenario_031,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3409
+scenario_031,High School Math,ablation_no_reward,hint,Constructive,0.022534,2136
+scenario_031,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1121
+scenario_032,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1083
+scenario_032,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1106
+scenario_032,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3226
+scenario_032,Python Programming,ablation_no_reward,direct_answer,Passive,0.652347,2052
+scenario_032,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1065
+scenario_033,Logical Reasoning,baseline_greedy,direct_answer,Passive,-1.0,1111
+scenario_033,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1129
+scenario_033,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,0.0,3332
+scenario_033,Logical Reasoning,ablation_no_reward,direct_answer,Passive,0.814532,2101
+scenario_033,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,1090
+scenario_034,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1114
+scenario_034,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1124
+scenario_034,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3342
+scenario_034,High School Math,ablation_no_reward,direct_answer,Passive,0.833623,2103
+scenario_034,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1122
+scenario_035,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1104
+scenario_035,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1106
+scenario_035,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3283
+scenario_035,Python Programming,ablation_no_reward,direct_answer,Passive,0.570168,2090
+scenario_035,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1087
+scenario_036,Logical Reasoning,baseline_greedy,direct_answer,Passive,-1.0,1092
+scenario_036,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1087
+scenario_036,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3234
+scenario_036,Logical Reasoning,ablation_no_reward,socratic_prompt,Constructive,0.934536,2058
+scenario_036,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,1074
+scenario_037,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1081
+scenario_037,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1083
+scenario_037,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3204
+scenario_037,High School Math,ablation_no_reward,direct_answer,Passive,-0.041708,2038
+scenario_037,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1055
+scenario_038,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1079
+scenario_038,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1097
+scenario_038,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3194
+scenario_038,Python Programming,ablation_no_reward,hint,Constructive,0.495103,2042
+scenario_038,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1059
+scenario_039,Logical Reasoning,baseline_greedy,direct_answer,Passive,-1.0,1100
+scenario_039,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1114
+scenario_039,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3262
+scenario_039,Logical Reasoning,ablation_no_reward,socratic_prompt,Constructive,-0.10121,2074
+scenario_039,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,1082
+scenario_040,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1153
+scenario_040,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1151
+scenario_040,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3364
+scenario_040,High School Math,ablation_no_reward,hint,Constructive,0.864357,2127
+scenario_040,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1112
+scenario_041,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1169
+scenario_041,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,0.0,1184
+scenario_041,High School Math,pmcts_full,socratic_prompt,Constructive,0.0,3490
+scenario_041,High School Math,ablation_no_reward,socratic_prompt,Constructive,0.587541,2167
+scenario_041,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1144
+scenario_042,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1136
+scenario_042,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1155
+scenario_042,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3372
+scenario_042,Python Programming,ablation_no_reward,hint,Constructive,0.912734,2119
+scenario_042,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1118
+scenario_043,Logical Reasoning,baseline_greedy,direct_answer,Passive,-1.0,1146
+scenario_043,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1148
+scenario_043,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3376
+scenario_043,Logical Reasoning,ablation_no_reward,direct_answer,Passive,0.336954,2132
+scenario_043,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,1130
+scenario_044,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1126
+scenario_044,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1126
+scenario_044,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3352
+scenario_044,High School Math,ablation_no_reward,hint,Constructive,0.539056,2109
+scenario_044,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1108
+scenario_045,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1123
+scenario_045,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1132
+scenario_045,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3340
+scenario_045,Python Programming,ablation_no_reward,direct_answer,Passive,0.899871,2105
+scenario_045,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1111
+scenario_046,Logical Reasoning,baseline_greedy,direct_answer,Constructive,0.0,1143
+scenario_046,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1106
+scenario_046,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3311
+scenario_046,Logical Reasoning,ablation_no_reward,hint,Constructive,0.175869,2088
+scenario_046,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,1099
+scenario_047,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1134
+scenario_047,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1133
+scenario_047,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3355
+scenario_047,High School Math,ablation_no_reward,direct_answer,Passive,0.916555,2112
+scenario_047,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1110
+scenario_048,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1108
+scenario_048,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1109
+scenario_048,Python Programming,pmcts_full,socratic_prompt,Constructive,0.0,3308
+scenario_048,Python Programming,ablation_no_reward,hint,Constructive,0.870112,2070
+scenario_048,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1076
+scenario_049,Logical Reasoning,baseline_greedy,direct_answer,Constructive,-0.5,1101
+scenario_049,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1091
+scenario_049,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3217
+scenario_049,Logical Reasoning,ablation_no_reward,socratic_prompt,Constructive,0.830032,2042
+scenario_049,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,1070
+scenario_050,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1104
+scenario_050,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1111
+scenario_050,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3276
+scenario_050,High School Math,ablation_no_reward,socratic_prompt,Constructive,0.61599,2076
+scenario_050,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1094
+scenario_051,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1053
+scenario_051,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1067
+scenario_051,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3112
+scenario_051,High School Math,ablation_no_reward,direct_answer,Passive,-0.606606,1998
+scenario_051,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1031
+scenario_052,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1028
+scenario_052,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1029
+scenario_052,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3034
+scenario_052,Python Programming,ablation_no_reward,direct_answer,Passive,0.775542,1957
+scenario_052,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1000
+scenario_053,Logical Reasoning,baseline_greedy,direct_answer,Passive,-1.0,1059
+scenario_053,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1059
+scenario_053,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3115
+scenario_053,Logical Reasoning,ablation_no_reward,socratic_prompt,Constructive,0.539067,2002
+scenario_053,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,1035
+scenario_054,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1018
+scenario_054,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1018
+scenario_054,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3017
+scenario_054,High School Math,ablation_no_reward,direct_answer,Passive,0.020776,1952
+scenario_054,High School Math,ablation_shallow,direct_answer,Passive,-1.0,995
+scenario_055,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1041
+scenario_055,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1045
+scenario_055,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3080
+scenario_055,Python Programming,ablation_no_reward,hint,Constructive,0.897564,1984
+scenario_055,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1018
+scenario_056,Logical Reasoning,baseline_greedy,direct_answer,Passive,-1.0,1039
+scenario_056,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1027
+scenario_056,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3079
+scenario_056,Logical Reasoning,ablation_no_reward,socratic_prompt,Constructive,0.609877,1970
+scenario_056,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,1018
+scenario_057,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1017
+scenario_057,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1019
+scenario_057,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3035
+scenario_057,High School Math,ablation_no_reward,direct_answer,Passive,0.039227,1942
+scenario_057,High School Math,ablation_shallow,direct_answer,Passive,-1.0,980
+scenario_058,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1016
+scenario_058,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1017
+scenario_058,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3002
+scenario_058,Python Programming,ablation_no_reward,socratic_prompt,Constructive,0.356997,1948
+scenario_058,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,992
+scenario_059,Logical Reasoning,baseline_greedy,direct_answer,Passive,-1.0,1016
+scenario_059,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1009
+scenario_059,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3013
+scenario_059,Logical Reasoning,ablation_no_reward,hint,Constructive,0.842911,1929
+scenario_059,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,986
+scenario_060,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1010
+scenario_060,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1001
+scenario_060,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,2964
+scenario_060,High School Math,ablation_no_reward,hint,Constructive,0.677961,1932
+scenario_060,High School Math,ablation_shallow,direct_answer,Passive,-1.0,990
+scenario_061,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1089
+scenario_061,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1109
+scenario_061,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3256
+scenario_061,High School Math,ablation_no_reward,socratic_prompt,Constructive,0.509419,2056
+scenario_061,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1072
+scenario_062,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1008
+scenario_062,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1033
+scenario_062,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,2993
+scenario_062,Python Programming,ablation_no_reward,socratic_prompt,Constructive,0.755634,1929
+scenario_062,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,987
+scenario_063,Logical Reasoning,baseline_greedy,direct_answer,Passive,-1.0,1027
+scenario_063,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1044
+scenario_063,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3032
+scenario_063,Logical Reasoning,ablation_no_reward,socratic_prompt,Constructive,0.570818,1946
+scenario_063,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,997
+scenario_064,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1016
+scenario_064,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1031
+scenario_064,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3005
+scenario_064,High School Math,ablation_no_reward,direct_answer,Passive,0.913175,1929
+scenario_064,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1007
+scenario_065,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,987
+scenario_065,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,994
+scenario_065,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,2929
+scenario_065,Python Programming,ablation_no_reward,socratic_prompt,Constructive,-0.149291,1897
+scenario_065,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,968
+scenario_066,Logical Reasoning,baseline_greedy,direct_answer,Passive,-1.0,1009
+scenario_066,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1006
+scenario_066,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,2969
+scenario_066,Logical Reasoning,ablation_no_reward,hint,Constructive,-0.311868,1920
+scenario_066,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,992
+scenario_067,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1014
+scenario_067,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1021
+scenario_067,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3010
+scenario_067,High School Math,ablation_no_reward,hint,Constructive,0.560496,1934
+scenario_067,High School Math,ablation_shallow,direct_answer,Passive,-1.0,992
+scenario_068,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,989
+scenario_068,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1007
+scenario_068,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,2934
+scenario_068,Python Programming,ablation_no_reward,socratic_prompt,Constructive,-0.064599,1899
+scenario_068,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,973
+scenario_069,Logical Reasoning,baseline_greedy,direct_answer,Passive,-1.0,1011
+scenario_069,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1003
+scenario_069,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,2971
+scenario_069,Logical Reasoning,ablation_no_reward,hint,Constructive,0.593205,1924
+scenario_069,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,985
+scenario_070,High School Math,baseline_greedy,direct_answer,Passive,-1.0,975
+scenario_070,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,986
+scenario_070,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,2929
+scenario_070,High School Math,ablation_no_reward,hint,Constructive,0.69574,1892
+scenario_070,High School Math,ablation_shallow,direct_answer,Passive,-1.0,963
+scenario_071,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1260
+scenario_071,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,0.0,1277
+scenario_071,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3744
+scenario_071,High School Math,ablation_no_reward,socratic_prompt,Constructive,0.907348,2310
+scenario_071,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1239
+scenario_072,Python Programming,baseline_greedy,direct_answer,Constructive,-1.0,1176
+scenario_072,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1174
+scenario_072,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3431
+scenario_072,Python Programming,ablation_no_reward,hint,Constructive,0.566628,2176
+scenario_072,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1146
+scenario_073,Logical Reasoning,baseline_greedy,direct_answer,Constructive,0.0,1120
+scenario_073,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1109
+scenario_073,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3284
+scenario_073,Logical Reasoning,ablation_no_reward,hint,Constructive,0.922397,2088
+scenario_073,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,1096
+scenario_074,High School Math,baseline_greedy,direct_answer,Constructive,0.0,1157
+scenario_074,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1158
+scenario_074,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3389
+scenario_074,High School Math,ablation_no_reward,hint,Constructive,0.124005,2132
+scenario_074,High School Math,ablation_shallow,direct_answer,Constructive,0.0,1129
+scenario_075,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1116
+scenario_075,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1119
+scenario_075,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3315
+scenario_075,Python Programming,ablation_no_reward,direct_answer,Passive,0.144664,2095
+scenario_075,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1092
+scenario_076,Logical Reasoning,baseline_greedy,direct_answer,Passive,-1.0,1109
+scenario_076,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1097
+scenario_076,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3279
+scenario_076,Logical Reasoning,ablation_no_reward,direct_answer,Passive,0.432025,2083
+scenario_076,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,1083
+scenario_077,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1143
+scenario_077,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1162
+scenario_077,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3396
+scenario_077,High School Math,ablation_no_reward,socratic_prompt,Constructive,-0.4106,2148
+scenario_077,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1125
+scenario_078,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1136
+scenario_078,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1156
+scenario_078,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3365
+scenario_078,Python Programming,ablation_no_reward,direct_answer,Passive,0.111468,2125
+scenario_078,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1112
+scenario_079,Logical Reasoning,baseline_greedy,direct_answer,Passive,-1.0,1099
+scenario_079,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1115
+scenario_079,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3253
+scenario_079,Logical Reasoning,ablation_no_reward,direct_answer,Passive,0.909751,2068
+scenario_079,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,1066
+scenario_080,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1174
+scenario_080,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1193
+scenario_080,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3515
+scenario_080,High School Math,ablation_no_reward,direct_answer,Passive,0.518225,2199
+scenario_080,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1160
+scenario_081,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1155
+scenario_081,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1194
+scenario_081,High School Math,pmcts_full,socratic_prompt,Constructive,0.5,3498
+scenario_081,High School Math,ablation_no_reward,direct_answer,Constructive,0.260173,2166
+scenario_081,High School Math,ablation_shallow,direct_answer,Constructive,-0.5,1159
+scenario_082,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1105
+scenario_082,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1127
+scenario_082,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3268
+scenario_082,Python Programming,ablation_no_reward,direct_answer,Passive,0.674782,2065
+scenario_082,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1088
+scenario_083,Logical Reasoning,baseline_greedy,direct_answer,Passive,-1.0,1076
+scenario_083,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1074
+scenario_083,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3182
+scenario_083,Logical Reasoning,ablation_no_reward,hint,Constructive,-0.176715,2026
+scenario_083,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,1052
+scenario_084,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1116
+scenario_084,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1122
+scenario_084,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3311
+scenario_084,High School Math,ablation_no_reward,direct_answer,Passive,0.796108,2072
+scenario_084,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1096
+scenario_085,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1065
+scenario_085,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1070
+scenario_085,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3167
+scenario_085,Python Programming,ablation_no_reward,socratic_prompt,Constructive,-0.8071,2007
+scenario_085,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1048
+scenario_086,Logical Reasoning,baseline_greedy,direct_answer,Passive,-1.0,1076
+scenario_086,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1081
+scenario_086,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3181
+scenario_086,Logical Reasoning,ablation_no_reward,socratic_prompt,Constructive,0.371653,2019
+scenario_086,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,1057
+scenario_087,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1093
+scenario_087,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1105
+scenario_087,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3250
+scenario_087,High School Math,ablation_no_reward,direct_answer,Passive,0.872222,2055
+scenario_087,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1072
+scenario_088,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1103
+scenario_088,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1118
+scenario_088,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3254
+scenario_088,Python Programming,ablation_no_reward,socratic_prompt,Constructive,0.309434,2066
+scenario_088,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1077
+scenario_089,Logical Reasoning,baseline_greedy,direct_answer,Passive,-1.0,1094
+scenario_089,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1094
+scenario_089,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3218
+scenario_089,Logical Reasoning,ablation_no_reward,direct_answer,Passive,0.849488,2042
+scenario_089,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,1074
+scenario_090,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1089
+scenario_090,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1115
+scenario_090,High School Math,pmcts_full,direct_answer,Constructive,0.0,3270
+scenario_090,High School Math,ablation_no_reward,socratic_prompt,Constructive,0.958224,2050
+scenario_090,High School Math,ablation_shallow,direct_answer,Constructive,-0.5,1083
+scenario_091,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1134
+scenario_091,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1170
+scenario_091,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3420
+scenario_091,High School Math,ablation_no_reward,socratic_prompt,Constructive,0.722602,2138
+scenario_091,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1116
+scenario_092,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1079
+scenario_092,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1096
+scenario_092,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3205
+scenario_092,Python Programming,ablation_no_reward,hint,Constructive,0.894127,2042
+scenario_092,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1055
+scenario_093,Logical Reasoning,baseline_greedy,direct_answer,Passive,-1.0,1074
+scenario_093,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1085
+scenario_093,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3206
+scenario_093,Logical Reasoning,ablation_no_reward,socratic_prompt,Constructive,0.470774,2034
+scenario_093,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,1059
+scenario_094,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1077
+scenario_094,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1061
+scenario_094,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3136
+scenario_094,High School Math,ablation_no_reward,socratic_prompt,Constructive,0.390601,2017
+scenario_094,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1053
+scenario_095,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1051
+scenario_095,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1053
+scenario_095,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3115
+scenario_095,Python Programming,ablation_no_reward,direct_answer,Passive,0.916568,2009
+scenario_095,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1038
+scenario_096,Logical Reasoning,baseline_greedy,direct_answer,Constructive,0.0,1086
+scenario_096,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1045
+scenario_096,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3124
+scenario_096,Logical Reasoning,ablation_no_reward,hint,Constructive,0.805921,1992
+scenario_096,Logical Reasoning,ablation_shallow,direct_answer,Constructive,0.0,1045
+scenario_097,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1045
+scenario_097,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1056
+scenario_097,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3100
+scenario_097,High School Math,ablation_no_reward,hint,Constructive,0.121726,1990
+scenario_097,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1021
+scenario_098,Python Programming,baseline_greedy,direct_answer,Passive,-1.0,1076
+scenario_098,Python Programming,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1109
+scenario_098,Python Programming,pmcts_full,socratic_prompt,Constructive,1.0,3217
+scenario_098,Python Programming,ablation_no_reward,direct_answer,Passive,0.443356,2028
+scenario_098,Python Programming,ablation_shallow,direct_answer,Passive,-1.0,1058
+scenario_099,Logical Reasoning,baseline_greedy,direct_answer,Constructive,0.0,1067
+scenario_099,Logical Reasoning,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1078
+scenario_099,Logical Reasoning,pmcts_full,socratic_prompt,Constructive,1.0,3088
+scenario_099,Logical Reasoning,ablation_no_reward,hint,Constructive,-0.291919,1987
+scenario_099,Logical Reasoning,ablation_shallow,direct_answer,Passive,-1.0,1035
+scenario_100,High School Math,baseline_greedy,direct_answer,Passive,-1.0,1048
+scenario_100,High School Math,baseline_socratic_prompt,socratic_prompt,Constructive,1.0,1046
+scenario_100,High School Math,pmcts_full,socratic_prompt,Constructive,1.0,3114
+scenario_100,High School Math,ablation_no_reward,socratic_prompt,Constructive,0.3116,1983
+scenario_100,High School Math,ablation_shallow,direct_answer,Passive,-1.0,1029
