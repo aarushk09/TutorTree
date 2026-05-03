@@ -5,6 +5,7 @@ import { isSupabaseConfigured, supabase } from "./supabaseClient";
 
 type Selection = "A" | "B" | "Tie";
 type Stage = "landing" | "tour" | "evaluation" | "feedback" | "finished";
+type WarningLabel = "answered_under_3_seconds";
 type EvaluatorRole =
   | "University Faculty"
   | "K-12 Teacher"
@@ -14,6 +15,9 @@ type EvaluatorRole =
 
 const SESSION_KEY = "neurips-human-eval-session-id";
 const EVALUATOR_ROLE_KEY = "neurips-human-eval-evaluator-role";
+const QUALITY_REMINDER_KEY = "neurips-human-eval-hide-quality-reminder";
+const FAST_RESPONSE_THRESHOLD_MS = 3000;
+const QUALITY_REMINDER_SECONDS = 5;
 const evaluatorRoles: EvaluatorRole[] = [
   "University Faculty",
   "K-12 Teacher",
@@ -57,6 +61,22 @@ function getStoredEvaluatorRole(): EvaluatorRole | "" {
   return evaluatorRoles.includes(storedRole as EvaluatorRole)
     ? (storedRole as EvaluatorRole)
     : "";
+}
+
+function getStoredReminderPreference() {
+  return localStorage.getItem(QUALITY_REMINDER_KEY) === "true";
+}
+
+function shuffleScenarios(source: Scenario[]) {
+  const shuffled = [...source];
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[randomIndex]] = [
+      shuffled[randomIndex],
+      shuffled[index],
+    ];
+  }
+  return shuffled;
 }
 
 function Transcript({ value }: { value: string }) {
@@ -205,6 +225,7 @@ function InterventionCard({
 
 export function App() {
   const [sessionId] = useState(getSessionId);
+  const [shuffledScenarios] = useState(() => shuffleScenarios(scenarios));
   const [stage, setStage] = useState<Stage>("landing");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [evaluatorRole, setEvaluatorRole] = useState<EvaluatorRole | "">(
@@ -213,15 +234,27 @@ export function App() {
   const [selected, setSelected] = useState<Selection | null>(null);
   const [reasoning, setReasoning] = useState("");
   const [feedbackText, setFeedbackText] = useState("");
+  const [responseTimeMs, setResponseTimeMs] = useState<number | null>(null);
+  const [warningLabel, setWarningLabel] = useState<WarningLabel | null>(null);
+  const [pendingSelection, setPendingSelection] = useState<Selection | null>(null);
+  const [showQualityReminder, setShowQualityReminder] = useState(false);
+  const [showPedagogyDefinition, setShowPedagogyDefinition] = useState(false);
+  const [reminderCountdown, setReminderCountdown] = useState(
+    QUALITY_REMINDER_SECONDS,
+  );
+  const [hideQualityReminder, setHideQualityReminder] = useState(
+    getStoredReminderPreference,
+  );
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isAdvancing, setIsAdvancing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const scenarioStartedAtRef = useRef(Date.now());
 
-  const currentScenario = scenarios[currentIndex];
+  const currentScenario = shuffledScenarios[currentIndex];
   const progress = useMemo(
-    () => Math.round(((currentIndex + 1) / scenarios.length) * 100),
-    [currentIndex],
+    () => Math.round(((currentIndex + 1) / shuffledScenarios.length) * 100),
+    [currentIndex, shuffledScenarios.length],
   );
 
   const updateEvaluatorRole = (role: EvaluatorRole) => {
@@ -236,6 +269,24 @@ export function App() {
   }, [selected, stage]);
 
   useEffect(() => {
+    if (stage !== "evaluation") return;
+    scenarioStartedAtRef.current = Date.now();
+    setResponseTimeMs(null);
+    setWarningLabel(null);
+    setPendingSelection(null);
+    setShowQualityReminder(false);
+    setReminderCountdown(QUALITY_REMINDER_SECONDS);
+  }, [currentIndex, stage]);
+
+  useEffect(() => {
+    if (!showQualityReminder || reminderCountdown <= 0) return;
+    const timer = window.setTimeout(() => {
+      setReminderCountdown((seconds) => seconds - 1);
+    }, 1000);
+    return () => window.clearTimeout(timer);
+  }, [showQualityReminder, reminderCountdown]);
+
+  useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (stage !== "evaluation") return;
       const target = event.target as HTMLElement | null;
@@ -245,23 +296,49 @@ export function App() {
 
       if (event.key === "ArrowLeft") {
         event.preventDefault();
-        setSelected("A");
-        setError(null);
+        selectIntervention("A");
       }
 
       if (event.key === "ArrowRight") {
         event.preventDefault();
-        setSelected("B");
-        setError(null);
+        selectIntervention("B");
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [stage]);
+  }, [stage, hideQualityReminder]);
 
   const selectIntervention = (choice: Selection) => {
+    if (stage === "evaluation") {
+      const elapsedMs = Date.now() - scenarioStartedAtRef.current;
+      const isFastResponse = elapsedMs < FAST_RESPONSE_THRESHOLD_MS;
+      setResponseTimeMs(elapsedMs);
+      setWarningLabel(isFastResponse ? "answered_under_3_seconds" : null);
+
+      if (isFastResponse && !hideQualityReminder) {
+        setPendingSelection(choice);
+        setReminderCountdown(QUALITY_REMINDER_SECONDS);
+        setShowQualityReminder(true);
+        setError(null);
+        return;
+      }
+    }
+
     setSelected(choice);
+    setError(null);
+  };
+
+  const continueAfterQualityReminder = () => {
+    if (!pendingSelection || reminderCountdown > 0) return;
+
+    if (hideQualityReminder) {
+      localStorage.setItem(QUALITY_REMINDER_KEY, "true");
+    }
+
+    setSelected(pendingSelection);
+    setPendingSelection(null);
+    setShowQualityReminder(false);
     setError(null);
   };
 
@@ -285,6 +362,8 @@ export function App() {
         selected_intervention: selected,
         evaluator_role: evaluatorRole,
         reasoning: reasoning.trim() || null,
+        response_time_ms: responseTimeMs,
+        warning_label: warningLabel,
       });
 
     if (insertError) {
@@ -295,7 +374,7 @@ export function App() {
 
     setIsAdvancing(true);
     window.setTimeout(() => {
-      if (currentIndex + 1 >= scenarios.length) {
+      if (currentIndex + 1 >= shuffledScenarios.length) {
         setStage("feedback");
       } else {
         setCurrentIndex((index) => index + 1);
@@ -343,7 +422,31 @@ export function App() {
             This study evaluates AI tutoring interventions for educational
             dialogue. You will be presented with 30 brief scenarios showing a
             student's profile and chat history. Your task is to select which AI
-            intervention is pedagogically superior.
+            intervention is{" "}
+            <span className="definition-wrapper">
+              <button
+                type="button"
+                className="definition-trigger"
+                aria-expanded={showPedagogyDefinition}
+                aria-describedby="pedagogy-definition"
+                onClick={() =>
+                  setShowPedagogyDefinition((isVisible) => !isVisible)
+                }
+              >
+                pedagogically
+              </button>
+              {showPedagogyDefinition && (
+                <span
+                  id="pedagogy-definition"
+                  className="definition-popover"
+                  role="tooltip"
+                >
+                  Related to teaching quality: how well an intervention helps a
+                  student understand, reason, and continue learning.
+                </span>
+              )}
+            </span>{" "}
+            superior.
           </p>
           <div className="disclaimer-block">
             <p>
@@ -413,6 +516,7 @@ export function App() {
             onClick={() => {
               setSelected(null);
               setError(null);
+              scenarioStartedAtRef.current = Date.now();
               setStage("evaluation");
             }}
           >
@@ -466,11 +570,54 @@ export function App() {
         scenario={currentScenario}
         selected={selected}
         stageLabel="Blind A/B Tutoring Evaluation"
-        title={`Scenario ${currentIndex + 1} of ${scenarios.length}`}
+        title={`Scenario ${currentIndex + 1} of ${shuffledScenarios.length}`}
         progressLabel={`${progress}% complete`}
         progress={progress}
         onSelect={selectIntervention}
       />
+
+      {showQualityReminder && (
+        <div className="modal-backdrop" role="presentation">
+          <section
+            className="quality-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="quality-reminder-title"
+          >
+            <p className="kicker">Reading Check</p>
+            <h2 id="quality-reminder-title">Please take your time.</h2>
+            <p>
+              Careful judgments help improve future tutoring tools for{" "}
+              people in roles like yours. Please spend at least a few seconds
+              reading both choices before continuing.
+            </p>
+            <label className="modal-checkbox">
+              <input
+                type="checkbox"
+                checked={hideQualityReminder}
+                onChange={(event) => {
+                  const shouldHide = event.target.checked;
+                  setHideQualityReminder(shouldHide);
+                  if (!shouldHide) {
+                    localStorage.removeItem(QUALITY_REMINDER_KEY);
+                  }
+                }}
+              />
+              <span>Do not remind me again</span>
+            </label>
+            <button
+              type="button"
+              className="primary-action compact"
+              disabled={reminderCountdown > 0}
+              onClick={continueAfterQualityReminder}
+            >
+              {reminderCountdown > 0
+                ? `Continue in ${reminderCountdown}`
+                : "Close and Continue"}
+            </button>
+          </section>
+        </div>
+      )}
 
       {!isSupabaseConfigured && (
         <aside className="system-notice" role="status">
